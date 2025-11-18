@@ -1,5 +1,4 @@
-// Problem 01 
-const formatValue = (input: string | number | boolean): (string | number | boolean) => {
+ const formatValue = (input: string | number | boolean): (string | number | boolean) => {
 
     if (typeof input === "string") {
         return input.toUpperCase()
@@ -12,16 +11,22 @@ const formatValue = (input: string | number | boolean): (string | number | boole
 }
 
 
-// Problem 02
-const getLength = (input: string | any[]): number => {
+
+
+
+
+
+ const getLength = (input: string | any[]): number => {
     if (typeof input === "string" || Array.isArray(input)) { return input.length }
     return 0
 }
 
 
 
-// Problem 03
-class Person {
+
+
+
+ class Person {
     name: string;
     age: number;
 
@@ -32,29 +37,36 @@ class Person {
     }
 
     getDetails(): string {
-        return `Name:${this.name}, Age: ${this.age}`;
+        return `'Name:${this.name}, Age: ${this.age}'`;
     }
 }
 
 
+ 
 
-// Problem 04
-const filterByRating = (input: { title: string, rating: number }[]): ({ title: string, rating: number }[]) => {
+
+
+
+ const filterByRating = (input: { title: string, rating: number }[]): ({ title: string, rating: number }[]) => {
     return input.filter(item => item.rating >= 4.0)
 }
 
 
 
-// Problem 05:
-const filterActiveUsers = (input: { id: number, name: string, email: string, isActive: boolean }[]): { id: number, name: string, email: string, isActive: boolean }[] => {
+
+
+
+ const filterActiveUsers = (input: { id: number, name: string, email: string, isActive: boolean }[]): { id: number, name: string, email: string, isActive: boolean }[] => {
     return input.filter(activeUser => activeUser?.isActive === true)
 }
 
 
 
 
-// Problem 06:
-interface Book {
+
+
+
+ interface Book {
     title: string;
     author: string;
     publishedYear: number;
@@ -68,8 +80,10 @@ const printBookDetails = (inputValue: Book): string => {
 
 
 
-// Problem 07:
-const getUniqueValues = (value01: (string | number)[], value02: (string | number)[]): (string | number)[] => {
+
+
+
+ const getUniqueValues = (value01: (string | number)[], value02: (string | number)[]): (string | number)[] => {
     const result: (string | number)[] = [];
 
     for (const value of value01) {
@@ -85,8 +99,10 @@ const getUniqueValues = (value01: (string | number)[], value02: (string | number
 
 
 
-// Problem 08:
-const calculateTotalPrice = (inputValue: { name: string; price: number; quantity: number; discount?: number }[]): number => {
+
+
+
+ const calculateTotalPrice = (inputValue: { name: string; price: number; quantity: number; discount?: number }[]): number => {
     if (inputValue.length === 0) return 0;
 
     return inputValue.map((product) => {
